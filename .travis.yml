@@ -9,9 +9,10 @@ before_install:
 
 script:
   - docker run -e CI=true dockerdec1981/docker-react npm run test
+
 deploy:
-  provider: elasticbeanstalk
-  region: "ap-south-1
+  provider: "elasticbeanstalk"
+  region: "ap-south-1"
   app: "docker"
   env: "docker-env"
   bucket_name: "elasticbeanstalk-ap-south-1-826986868953"
